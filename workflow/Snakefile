@@ -1,0 +1,7 @@
+include: "rules/common.smk"
+include: "rules/map_reads.smk"
+include: "rules/variant_calling.smk"
+
+rule all:
+    input:
+        expand("{outpath}/{sample}.{cov}.SNV.tier.{ref_version}.mosaic_summary.txt", outpath=outpath, sample=sample, cov=cov, ref_version=ref_version)

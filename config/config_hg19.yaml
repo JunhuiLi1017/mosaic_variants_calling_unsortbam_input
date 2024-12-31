@@ -1,0 +1,37 @@
+units: ../config/units.tsv
+
+##-------------------
+## general parameters
+##-------------------
+ref_version: hg19
+reference: /pi/mccb-umw/shared/genome/hg19/hg19.chr.fa
+outpath: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/02ProcessedData/WGS/01_Mosaic_variants/bam38
+
+##---------qc----------
+paired: True
+trim_value: 10
+trim: False
+
+##---------map----------
+known_indels: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/database_fromHPCC/dataset/bundle/hg19/1000G_phase1.indels.hg19.sites.vcf.gz
+Mills_and_1000G: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/database_fromHPCC/dataset/bundle/hg19/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf.gz
+pcr_based: True
+
+##---------snv----------
+pon: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/GATK/Mutect2/subPON/somatic-b37_Mutect2-WGS-panel-b37.vcf.gz
+af_only_gnomad: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/database_fromHPCC/dataset/Regions_to_filter_out/hg19/af-only-gnomad/af-only-gnomad.raw.sites.b37.vcf.gz
+interval_dir: /pi/mccb-umw/shared/genome/hg19/intervals
+dpsnp138: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/database_fromHPCC/dataset/bundle/hg19/dbsnp_138.hg19.vcf
+
+##---------mosaic----------
+SegDup_and_clustered: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/05softwares/mosaicforecast/MosaicForecast-master/resources/SegDup_and_clustered.GRCh37.chr.bed
+allrepeats_forindel: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/05softwares/mosaicforecast/MosaicForecast-master/resources/allrepeats_forindel.GRCh37.bed
+umap: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/database_fromHPCC/dataset/Umap/hg19/k24.umap.wg.bw
+avail_acess_1000g: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/02_filter/hg19/1000g_acessibility_mask_strict_hg19.bed
+refine_beta: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/02ProcessedData/WGS/14_retrain_mosaic_model/04_retrain/02_train/refine_rna_igv_2nd.rds
+depth: 50x
+
+##---------software----------
+gatk_4.0.12.0_path: /home/junhui.li11-umw/anaconda3/envs/gatk4.0.xx/share/gatk4-4.0.12.0-0/gatk-package-4.0.12.0-local.jar
+gatk_4.1.8.1_path: /home/junhui.li11-umw/anaconda3/envs/snakemake/share/gatk4-4.1.8.1-0/gatk-package-4.1.8.1-local.jar
+gatk_current_using: /home/junhui.li11-umw/anaconda3/envs/snakemake/share/gatk4-4.1.8.1-0/gatk-package-4.1.8.1-local.jar

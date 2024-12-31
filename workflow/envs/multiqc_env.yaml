@@ -1,0 +1,5 @@
+channels:
+ - bioconda
+ - conda-forge
+dependencies:
+ - multiqc=v1.22.2 # Specify the version you need

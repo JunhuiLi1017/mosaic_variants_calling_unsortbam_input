@@ -1,0 +1,38 @@
+units: ../config/units.tsv
+
+##-------------------
+## general parameters
+##-------------------
+ref_version: hg38
+reference: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/database_fromHPCC/dataset/bundle/hg38/Homo_sapiens_assembly38.fasta
+outpath: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/02ProcessedData/WGS/01_Mosaic_variants/nygc
+interval: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/database_fromHPCC/dataset/bundle/hg38/interval
+
+##---------qc----------
+paired: True
+trim: False
+trim_value: 10
+
+##---------map----------
+known_indels: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/database_fromHPCC/dataset/bundle/hg38/1000G_phase3_v4_20130502.sites.hg38.vcf
+Mills_and_1000G: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/database_fromHPCC/dataset/bundle/hg38/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz
+pcr_based: True
+
+##---------snv----------
+pon: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/GATK/Mutect2/1000g_pon.hg38.vcf.gz
+af_only_gnomad: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/database_fromHPCC/dataset/Regions_to_filter_out/hg38/af-only-gnomad/af-only-gnomad.hg38.vcf.gz
+interval_dir: /pi/mccb-umw/shared/genome/hg19/intervals
+dpsnp138: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/database_fromHPCC/dataset/bundle/hg38/Homo_sapiens_assembly38.dbsnp138.vcf
+
+##---------mosaic----------
+SegDup_and_clustered: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/05softwares/mosaicforecast/MosaicForecast-master/resources/SegDup_and_clustered.GRCh38.bed
+allrepeats_forindel: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/05softwares/mosaicforecast/MosaicForecast-master/resources/SegDup_and_clustered.GRCh38.nochr.bed
+umap: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/database_fromHPCC/dataset/Umap/hg38/k24.umap.wg.bw
+avail_acess_1000g: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/03Database/02_filter/hg38/20160622.allChr.mask.bed
+refine_beta: /pi/michael.lodato-umw/junhui.li11-umw/BautistaSotelo_Cesar/20201130_MosaicVariant_DNA/02ProcessedData/WGS/14_retrain_mosaic_model/04_retrain/02_train/refine_rna_igv_2nd.rds
+depth: 50x
+
+##---------software----------
+gatk_4.0.12.0_path: /home/junhui.li11-umw/anaconda3/envs/gatk4.0.xx/share/gatk4-4.0.12.0-0/gatk-package-4.0.12.0-local.jar
+gatk_4.1.8.1_path: /home/junhui.li11-umw/anaconda3/envs/snakemake/share/gatk4-4.1.8.1-0/gatk-package-4.1.8.1-local.jar
+gatk_current_using: /home/junhui.li11-umw/anaconda3/envs/snakemake/share/gatk4-4.1.8.1-0/gatk-package-4.1.8.1-local.jar
